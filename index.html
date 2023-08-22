@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funksjoner med parametre</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <button onclick="changeColor('Red', 50, 100, 'Blue', 30)">Red</button>
+    <button onclick="changeColor('Blue', 100, 200, 'Red', 50)">Blue</button>
+    <div id="mainDiv"></div>
+
+    <Script>
+        function changeColor(color, width, height, textcolor, fontSize) {
+            document.getElementById('mainDiv').innerHTML = /*HTML*/`
+    <div style="
+    background-color:${color};
+    width:${width}%;
+    height:${height}px;
+    color:${textcolor};
+    font-Size:${fontSize}px;
+    ">Her er et eksempel<div>
+    `;
+        }
+
+    </Script>
+</body>
+
+</html>
